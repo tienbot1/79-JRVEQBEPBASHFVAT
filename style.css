@@ -1,0 +1,312 @@
+:root {
+    --fontHeaders: "Lobster", cursive;
+    --fontBody: "Open Sans", sans-serif;
+    --colorLightA: white;
+    --colorLightB: rgb(242 237 241);
+    --colorDarkA: rgb(12 24 64);
+    --colorPink: #bd86d9;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+p {
+    padding: 0;
+    margin: 0;
+}
+header {
+    width: 100%;
+    font-weight: 700;
+    padding: 100px 20px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--colorPink);
+    font-family: var(--fontHeaders);
+    color: #fff;
+    text-shadow: 3px 3px #7e3688;
+}
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+.showme {
+    font-size: 2rem;
+}
+.shrug {
+    font-size: 5rem;
+}
+.shrug span {
+    font-size: 8.2rem;
+    margin: 0 25px;
+    line-height: 1px;
+}
+header h1 {
+    font-size: 6.5rem;
+}
+header h2 {
+    margin-top: 2rem;
+    text-shadow: 1px 1px #7e3688;
+}
+.links {
+    font-size: 18px;
+    text-shadow: 1px 1px #7e3688;
+}
+.links a {
+    color: #fff;
+    display: inline-block;
+    line-height: 13px;
+    vertical-align: top;
+    margin: 0 5px;
+}
+.drip,
+.reverse-drip {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+.drip img {
+    height: 100%;
+}
+.drip {
+    filter: drop-shadow(2px 2px 0 #7e3688);
+}
+.reverse-drip {
+    filter: drop-shadow(2px -2px 0 #7e3688);
+}
+.reverse-drip img {
+    height: 100%;
+    transform: rotateZ(180deg);
+}
+.promo {
+    min-height: auto;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+.promo-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 60px 40px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+article {
+    background: var(--colorLightB);
+}
+article.promo:last-of-type {
+    padding-bottom: 110px;
+    margin-bottom: -110px;
+}
+article:last-of-type:after {
+    display: none;
+}
+article:after {
+    content: "";
+    height: 40px;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    left: 0;
+    background-color: #f2edf1;
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), repeating-linear-gradient(45deg, #fff 25%, #f2edf1 25%, #f2edf1 75%, #fff 75%, #fff);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+}
+article .title {
+    color: var(--colorDarkA);
+}
+article:nth-child(odd) {
+    background: var(--colorLightA);
+}
+article:nth-child(even) .inner-wrapper {
+    flex-direction: row-reverse;
+}
+.inner-wrapper {
+    display: flex;
+    margin: auto;
+    max-width: 900px;
+    gap: 50px;
+    padding: 100px 30px;
+}
+.inner-wrapper > div {
+    width: 50%;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product .inner {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product img {
+    height: 220px;
+    border: 10px solid #f5f5f5;
+    box-shadow: 0 0 0 3px #000, 3px 3px 7px;
+}
+.product img:nth-child(1) {
+    align-self: flex-end;
+}
+.product img:nth-child(2) {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    align-self: flex-start;
+}
+.product img:nth-child(3) {
+    align-self: flex-end;
+}
+article:nth-child(even) .product img:nth-child(1) {
+    align-self: flex-start;
+}
+article:nth-child(even) .product img:nth-child(2) {
+    align-self: flex-end;
+}
+article:nth-child(even) .product img:nth-child(3) {
+    align-self: flex-start;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--fontBody);
+    font-size: 15px;
+}
+.content p {
+    margin-bottom: 12px;
+}
+.title {
+    font-family: var(--fontHeaders);
+    font-size: 30px;
+    text-decoration: none;
+    line-height: 45px;
+    margin-bottom: 30px;
+}
+.blurb {
+    padding-bottom: 15px;
+    font-style: italic;
+    color: #333;
+}
+footer {
+    display: flex;
+    padding: 50px 60px 60px;
+    justify-content: center;
+    align-items: center;
+    background: var(--colorPink);
+    color: #fff;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+    font-family: helvetica, sans-serif;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.footer-message {
+    font-size: 16px;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+.page-button {
+    background: var(--colorPink);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-family: var(--fontBody);
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 1px #663399;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.button {
+    padding: 15px 20px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    background-color: #ffc800;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+    display: flex;
+    text-align: left;
+    border: 1px solid #333;
+    width: fit-content;
+    transition: background-color 150ms;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    background-color: #fc0;
+}
+.button .logo {
+    display: inline-block;
+    background: url(/5b73814537e6f5437ced8bc29a4814082dbdca9e/b6346/assets/icons/amz-logo.svg);
+    width: 20px;
+    height: 18px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+article:nth-child(odd) + .pagination {
+    background: var(--colorLightA);
+}
+.pagination {
+    background: var(--colorLightB);
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+    margin-bottom: -120px;
+}
+.legal {
+    max-width: 700px;
+    margin: auto;
+}
+.legal-footer {
+    margin: auto;
+    padding-top: 10px;
+}
+.legal-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+@media only screen and (max-width: 500px) {
+    header h1 {
+        font-size: 4.5rem;
+    }
+    .inner-wrapper {
+        flex-direction: column !important;
+    }
+    .inner-wrapper > div {
+        width: 100%;
+    }
+
+    .shrug {
+        font-size: 3rem;
+    }
+
+    .shrug span {
+        font-size: 6rem;
+        margin: 0 18px;
+    }
+}
