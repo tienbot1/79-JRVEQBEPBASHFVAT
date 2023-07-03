@@ -306,7 +306,7 @@ article:nth-child(odd) + .pagination {
     }
 
     .shrug span {
-        font-size: 6rem;
+        font-size: 5rem;
         margin: 0 18px;
     }
 }
