@@ -259,7 +259,7 @@ footer {
 }
 .button .logo {
     display: inline-block;
-    background: url(/5b73814537e6f5437ced8bc29a4814082dbdca9e/b6346/assets/icons/amz-logo.svg);
+    background: url(./amz-logo.svg);
     width: 20px;
     height: 18px;
     margin-left: 10px;
